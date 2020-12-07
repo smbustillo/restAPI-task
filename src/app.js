@@ -2,7 +2,7 @@
 import express from 'express'
 
 //importar /routes
-import IndexRoutes from '../routes/taskroutes'
+import TasksRoutes from '../routes/taskroutes'
 
 //creando un servidor express muy básico
 const app = express()
@@ -16,6 +16,6 @@ app.get('/',(req,res) => {
     res.json({message: 'Bienvenid@ a mi aplicación'})
 })
 
-app.use(IndexRoutes)
+app.use('/api/tasks',TasksRoutes)
 
 export default app;

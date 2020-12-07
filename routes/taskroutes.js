@@ -3,7 +3,8 @@ import {Router} from 'express'
 
 const router = Router()
 
-router.get('/tasks', (req,res) => {
+
+router.get('/', (req,res) => {
     res.send('Tasks')
 })
 
